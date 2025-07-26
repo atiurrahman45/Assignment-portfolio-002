@@ -56,6 +56,364 @@
     <header>
 <!-- Our Plants -->
  <style>
+/* Google Font */
+
+.noto-serif-font {
+    font-family: "Noto Serif", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+.inter-font {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0 auto;
+}
+
+/* Shered Style */
+
+.container {
+    max-width: 1440px;
+}
+
+.display-flex {
+    display: flex;
+}
+
+
+.color-title {
+    color: #E95A08;
+}
+
+.section-title {
+    font-size: 3.125rem;
+    font-weight: 700;
+}
+
+.section-description {
+    font-family: "Inter", sans-serif;
+    font-size: 1.375rem;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/* Navigation bar Style */
+.logo-images {
+    width: 100%;
+    height: 100%;
+}
+
+.nav-bar {
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    margin-top: 20px;
+    margin: 0 auto;
+}
+
+.nav-items {
+    gap: 49px;
+    list-style: none;
+}
+
+.nav-items a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-item {
+    color: rgb(107, 114, 128);
+}
+
+/* Always Fresh Flower */
+
+.banner_container {
+    align-items: end;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
+.banner_left {
+    width: 50%;
+    flex: 1;
+}
+
+.banner_right {
+    flex: 1;
+}
+
+.fresh-flower-description {
+    font-size: 1.375rem;
+}
+
+.banner_left_title {
+    font-size: 4.0625rem;
+}
+
+.fresh-flower-images {
+    width: 100%;
+}
+
+/* Our Plants */
+
+.our_plants {
+    margin-top: 100px;
+}
+
+.plant-title {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.plant-description {
+    text-align: center;
+    width: 65%;
+    margin-bottom: 43px;
+}
+
+/* card section */
+
+.card_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    column-gap: 18px;
+    row-gap: 18px;
+    margin: 0 auto;
+}
+
+.card_prent {
+    text-align: center;
+}
+
+.plant-images {
+    width: 100%;
+}
+
+.card-title {
+    font-size: 1.375rem;
+    font-weight: 500;
+}
+.card-title span{
+    font-weight: 550;
+}
+.plant-name {
+    padding-bottom: 10px;
+}
+
+.btn-style {
+    color: white;
+    background-color: #E95A08;
+    font-weight: 700;
+    border: 2px solid #E95A08;
+    padding: 19px 80px;
+    width: 100%;
+}
+.btn-style:hover{
+    background-color: rgba(255, 142, 3, 0.2);
+    color: black;
+}
+
+/* Flower & Plants Lover */
+
+.flowers_container {
+    gap: 90px;
+    align-items: center;
+    margin-top: 190px;
+}
+
+.left-lover {
+    width: 45%;
+}
+
+.right-lover {
+    width: 45%;
+}
+
+.nature-love-images {
+    width: 90%;
+    position: relative;
+}
+
+.flowers_right_title {
+    width: 70%;
+    margin: -28px;
+    margin-bottom: 10px;
+}
+
+.list-items li {
+    padding: 9px 0;
+}
+
+
+
+#trusted-badge {
+    width: 210px;
+    margin-right: -590px;
+    position: absolute;
+    top: 1940px;
+    left: 760px;
+}
+.badge1{
+    width: 98%;
+    position: absolute;
+    animation: trusted_badge 2s infinite linear;
+}
+@keyframes trusted_badge{
+    0%{
+        transform: rotate(0deg);
+        
+    }
+    100%{
+        transform: rotate(350deg);
+        
+    }
+    
+}
+
+
+/* Latest Deals */
+.deals-container {
+    text-align: center;
+    margin-top: 95px;
+}
+
+.deals-title {
+    margin-bottom: 8px;
+}
+
+/* Latest Deals */
+
+.collage-container {
+    display: flex;
+    margin: 65px 0;
+    height: 550px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 45px;
+    margin-bottom: 45px;
+}
+
+.flower-bg-1 {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/deal-bloom.png);
+    width: 90%;
+    height: 45%;
+    border-radius: 8px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.23rem;
+    color: white;
+   
+}
+.flower-bg-2 {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/deal-ana.png);
+    width: 100%;
+    height: 50%;
+    border-radius: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.25rem;
+}
+
+.flower-bg-3 {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/zabo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2.5rem;
+    
+}
+
+.left-images {
+    height: 100%;
+    width: 35%;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.right-images {
+    height: 100%;
+    width: 65%;
+    padding: 12px;
+}
+
+.flower-bg-1 a {
+    color: white;
+    font-family: "Inter", sans-serif;
+}
+
+.flower-bg-2 a {
+    color: white;
+    font-family: "Inter", sans-serif;
+}
+
+.flower-bg-3 a {
+    color: white;
+    font-family: "Inter", sans-serif;
+}
+
+/* Join the colorful Bunch */
+
+.colorful-bunch {
+    background-image: url(../assets/news-letter-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.colorful-container h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.colorful-container input {
+    padding: 15px 540px 14px 20px;
+}
+.colorful-container input:focus{
+    outline: 0;
+    border: 1px solid #E95A08;
+}
+
+.colorful-container button {
+    color: white;
+    background-color: #E95A08;
+    font-weight: 600;
+    padding: 15px 50px;
+    margin-left: -5px;
+    border:none;
+}
 
  </style>
       <section class="our_plants container">
@@ -244,6 +602,7 @@
           </div>
         </div>
       </section>
+      
     </header>
     <main>
 
